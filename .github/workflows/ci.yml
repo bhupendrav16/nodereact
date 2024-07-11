@@ -39,12 +39,12 @@ jobs:
     # Setup and build backend
     - name: Install backend dependencies
       run: npm install
-      working-directory: ./backend
+      working-directory: ./api
 
     - name: Build backend
       run: npm run build
-      working-directory: ./backend
+      working-directory: ./api
 
     - name: Run backend tests
       run: npm test
-      working-directory: ./backend
+      working-directory: ./api
