@@ -1,4 +1,3 @@
-
 name: Node.js CI
 
 on:
@@ -15,7 +14,6 @@ jobs:
     strategy:
       matrix:
         node-version: [16]
-       
 
     steps:
     - uses: actions/checkout@v4
@@ -24,8 +22,29 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install
-    - run: npm update
-    - run: npm run build 
-    - run: npm test
-    
+
+    # Setup and build frontend
+    - name: Install frontend dependencies
+      run: npm install
+      working-directory: ./my-app
+
+    - name: Build frontend
+      run: npm run build
+      working-directory: ./my-app
+
+    - name: Run frontend tests
+      run: npm test
+      working-directory: ./my-app
+
+    # Setup and build backend
+    - name: Install backend dependencies
+      run: npm install
+      working-directory: ./backend
+
+    - name: Build backend
+      run: npm run build
+      working-directory: ./backend
+
+    - name: Run backend tests
+      run: npm test
+      working-directory: ./backend
