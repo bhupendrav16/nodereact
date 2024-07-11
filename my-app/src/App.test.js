@@ -2,8 +2,14 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders user creation header', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const headerElement = getByText(/User creation/i);
+  expect(headerElement).toBeInTheDocument();
+});
+
+test('renders Create User button', () => {
+  const { getByText } = render(<App />);
+  const buttonElement = getByText(/Create User/i);
+  expect(buttonElement).toBeInTheDocument();
 });
