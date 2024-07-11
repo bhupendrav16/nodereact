@@ -1,0 +1,19 @@
+{
+  "name": "react-node-ts-example",
+  "version": "1.0.0",
+  "description": "Example project for the react and node with typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhupendrav16/nodereact.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhupendrav16/nodereact/issues"
+  },
+  "homepage": "https://github.com/bhupendrav16/nodereact#readme"
+}
